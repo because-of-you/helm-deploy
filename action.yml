@@ -64,6 +64,7 @@ inputs:
   repo-password:
     description: Helm repository password if authentication is needed.
     required: false
+
 runs:
   using: docker
-  image: docker://ghcr.io/vimeda/helm
+  image: Dockerfile
