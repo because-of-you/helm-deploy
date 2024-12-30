@@ -1,7 +1,6 @@
-FROM alpine/helm:3.16 as helm
+FROM node:22-alpine as node
 
-RUN curl -o- https://fnm.vercel.app/install | bash && \
-    fnm install 22
+RUN apk add helm
 
 COPY . /usr/src/
 ENTRYPOINT ["node", "/usr/src/index.js"]
